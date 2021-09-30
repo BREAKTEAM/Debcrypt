@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+from colored import fg
+
+color = fg('#008000')
 
 def pingo(iteration,
           total,
@@ -17,6 +20,6 @@ def pingo(iteration,
         100 * (iteration / float(total)))
     fillLength = int(length * iteration // total)
     bar = fill * fillLength + '-' * (length - fillLength)
-    print('\r%s |%s| %s%% %s' % (prefix, bar, percent, suffix), end='\r')
+    print(color + '\r%s |%s| %s%% %s' % (prefix, bar, percent, suffix), end='\r')
     if iteration == total:
         print()
