@@ -19,7 +19,7 @@ elif (options != "y" and options != "n"):
     sys.exit(color + 'Invalid Option')
 
 passwords = (options == "y")
-text_file = open("password-list/testingpass.txt", "r", encoding="cp437")
+text_file = open("pass.txt", "r", encoding="cp437")
 
 words = text_file.read().splitlines()
 
